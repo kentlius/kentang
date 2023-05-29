@@ -5,49 +5,62 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main class="my-5">
-    <h1><span class="greeting"></span>, I'm Kent</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo rerum
-      tenetur quas sequi vero laboriosam, vitae temporibus repellat illum?
-      Perferendis reprehenderit nostrum consequuntur hic ab laborum obcaecati
-      voluptatem amet aperiam.
-    </p>
+    <h1><span class="greeting"></span>, I'm a developer living in Indonesia</h1>
+    <br />
+    <p>ヾ(≧▽≦*)o</p>
     <hr class="my-8" />
-    <ul>
-      <li>
-        <p>
-          GitHub <a class="underline underline-offset-2 text-blue-600" href="https://github.com/kentlius" target="_blank"
-            >@kentlius</a
-          >
-        </p>
-      </li>
-      <li>
-        <p>
-          LinkedIn <a class="underline underline-offset-2 text-blue-600" href="https://www.linkedin.com/in/kentliusudarso/" target="_blank"
-            >/in/kentliusudarso</a
-          >
-        </p>
-      </li>
-      <li>
-        <p>
-          Instagram <a class="underline underline-offset-2 text-blue-600" href="https://www.instagram.com/kent_lius/" target="_blank"
-            >@kent_lius</a
-          >
-        </p>
-      </li>
-      <li>
-        <p>
-          Email <a class="underline underline-offset-2 text-blue-600" href="mailto:kent.liusudarso@gmail.com"
-            >kent.liusudarso@gmail.com</a
-          >
-        </p>
-      </li>
-    </ul>
+    <div>
+      <a
+        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
+        href="https://github.com/kentlius"
+        target="_blank">GitHub</a
+      > /
+      <a
+        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
+        href="https://www.linkedin.com/in/kentliusudarso/"
+        target="_blank">LinkedIn</a
+      > /
+      <a
+        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
+        href="https://www.instagram.com/kent_lius/"
+        target="_blank">Instagram</a
+      > /
+      <a
+        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
+        href="mailto:kent.liusudarso@gmail.com">kent.liusudarso@gmail.com</a
+      >
+    </div>
   </main>
 </BaseLayout>
 
 <script>
-  const greetings = ["Hej", "Hallo", "Hola", "Habari"];
+  const greetings = [
+    "Hello",
+    "Hola",
+    "Bonjour",
+    "Guten Tag",
+    "Ciao",
+    "Olá",
+    "Привет",
+    "你好",
+    "こんにちは",
+    "안녕하세요",
+    "สวัสดี",
+    "Hallo",
+    "Cześć",
+    "Hej",
+    "Hei",
+    "Halló",
+    "Ahoj",
+    "Salut",
+    "Halo",
+    "Hola",
+    "Helo",
+    "Hàlo",
+    "Aloha",
+    "Hallo",
+    "Saluton",
+  ];
   const randomGreeting =
     greetings[Math.floor(Math.random() * greetings.length)];
   const greeting = document.querySelector(".greeting");
