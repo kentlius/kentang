@@ -1,15 +1,55 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <main class="my-5">
+    <h1><span class="greeting"></span>, I'm Kent</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo rerum
+      tenetur quas sequi vero laboriosam, vitae temporibus repellat illum?
+      Perferendis reprehenderit nostrum consequuntur hic ab laborum obcaecati
+      voluptatem amet aperiam.
+    </p>
+    <hr class="my-8" />
+    <ul>
+      <li>
+        <p>
+          GitHub <a class="underline underline-offset-2 text-blue-600" href="https://github.com/kentlius" target="_blank"
+            >@kentlius</a
+          >
+        </p>
+      </li>
+      <li>
+        <p>
+          LinkedIn <a class="underline underline-offset-2 text-blue-600" href="https://www.linkedin.com/in/kentliusudarso/" target="_blank"
+            >/in/kentliusudarso</a
+          >
+        </p>
+      </li>
+      <li>
+        <p>
+          Instagram <a class="underline underline-offset-2 text-blue-600" href="https://www.instagram.com/kent_lius/" target="_blank"
+            >@kent_lius</a
+          >
+        </p>
+      </li>
+      <li>
+        <p>
+          Email <a class="underline underline-offset-2 text-blue-600" href="mailto:kent.liusudarso@gmail.com"
+            >kent.liusudarso@gmail.com</a
+          >
+        </p>
+      </li>
+    </ul>
+  </main>
+</BaseLayout>
+
+<script>
+  const greetings = ["Hej", "Hallo", "Hola", "Habari"];
+  const randomGreeting =
+    greetings[Math.floor(Math.random() * greetings.length)];
+  const greeting = document.querySelector(".greeting");
+  greeting && (greeting.textContent = randomGreeting);
+</script>
