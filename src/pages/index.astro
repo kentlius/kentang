@@ -5,8 +5,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout>
   <main class="my-5">
     <h1>
-      <span class="greeting inline-block animate-fade-in-down"></span>, I'm a
-      developer living in Indonesia
+      <span
+        class="greeting inline-block animate-fade-in-down cursor-pointer select-none"
+      ></span>, I'm a developer living in Indonesia
     </h1>
     <br />
     <p>ヾ(≧▽≦*)o</p>
@@ -63,8 +64,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     "Hallo",
     "Saluton",
   ];
-  const randomGreeting =
+
+  const randomGreeting = () =>
     greetings[Math.floor(Math.random() * greetings.length)];
+
   const greeting = document.querySelector(".greeting");
-  greeting && (greeting.textContent = randomGreeting);
+
+  greeting && (greeting.textContent = randomGreeting());
+
+  greeting &&
+    greeting.addEventListener("click", () => {
+      greeting.textContent = randomGreeting();
+    });
 </script>
