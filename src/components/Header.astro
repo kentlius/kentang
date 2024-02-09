@@ -1,13 +1,62 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import ThemeIcon from "./ThemeToggle.astro";
 ---
 
-<header>
-  <h1 class="text-4xl font-bold mb-4">Kent Liusudarso</h1>
-  <nav class="text-right mb-8 space-x-4">
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <ThemeIcon />
+<header
+  class="container flex justify-between items-center my-12 fixed transition-all duration-500 ease-in-out top-0 left-0 right-0 z-50"
+>
+  <h1 class="z-50 text-3xl md:hidden">KL.</h1>
+  <button
+    class="z-50 md:hidden"
+    onclick="document.querySelector('nav').classList.toggle('hidden')"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+  </button>
+
+  <h1 class="text-3xl hidden md:block">Kent L.</h1>
+  <nav
+    class="z-40 hidden fixed top-0 left-0 right-0 h-screen p-2 md:block md:static md:h-auto md:p-0 md:z-0"
+  >
+    <ul
+      class="flex flex-col h-full items-center justify-center text-3xl bg-gray-400 rounded-lg md:flex-row md:space-x-8 md:bg-transparent md:items-start md:text-xl"
+    >
+      <li>
+        <HeaderLink href="/">home</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink href="/about">about</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink href="/projects">projects</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink href="/contact">contact</HeaderLink>
+      </li>
+    </ul>
   </nav>
 </header>
+
+<script>
+  // let prevScrollpos = window.scrollY;
+  // window.onscroll = function () {
+  //   let currentScrollPos = window.scrollY;
+  //   if (prevScrollpos > currentScrollPos) {
+  //     document.querySelector("header").style.top = "0";
+  //   } else {
+  //     document.querySelector("header").style.top = "-100px";
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // };
+</script>

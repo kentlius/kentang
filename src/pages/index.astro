@@ -1,83 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Sparkles from "../components/Sparkles.astro";
 ---
 
 <BaseLayout>
-  <main class="my-5">
-    <h1>
-      <span
-        class="greeting inline-block animate-fade-in-down cursor-pointer select-none"
-      ></span>
-    </h1>
-    <br />
-    <p>ヾ(≧▽≦*)o</p>
-    <hr class="my-8" />
-    <div>
-      <a
-        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
-        href="https://github.com/kentlius"
-        target="_blank">GitHub</a
-      > /
-      <a
-        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
-        href="https://cv.kentliu.me/">CV</a
-      > /
-      <a
-        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
-        href="https://www.linkedin.com/in/kentliusudarso/"
-        target="_blank">LinkedIn</a
-      > /
-      <a
-        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
-        href="https://www.instagram.com/kent_lius/"
-        target="_blank">Instagram</a
-      > /
-      <a
-        class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
-        href="mailto:kent.liusudarso@gmail.com">kent.liusudarso@gmail.com</a
-      >
-    </div>
-  </main>
+  <Hero />
+  <div class="border-t"></div>
+  <About />
+  <div class="border-t"></div>
+  <Projects />
+  <div class="border-t"></div>
+  <Sparkles />
 </BaseLayout>
-
-<script>
-  const greetings = [
-    "Hello",
-    "Hola",
-    "Bonjour",
-    "Guten Tag",
-    "Ciao",
-    "Olá",
-    "Привет",
-    "你好",
-    "こんにちは",
-    "안녕하세요",
-    "สวัสดี",
-    "Hallo",
-    "Cześć",
-    "Hej",
-    "Hei",
-    "Halló",
-    "Ahoj",
-    "Salut",
-    "Halo",
-    "Hola",
-    "Helo",
-    "Hàlo",
-    "Aloha",
-    "Hallo",
-    "Saluton",
-  ];
-
-  const randomGreeting = () =>
-    greetings[Math.floor(Math.random() * greetings.length)];
-
-  const greeting = document.querySelector(".greeting");
-
-  greeting && (greeting.textContent = randomGreeting());
-
-  greeting &&
-    greeting.addEventListener("click", () => {
-      greeting.textContent = randomGreeting();
-    });
-</script>
