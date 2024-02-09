@@ -3,16 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <main class="my-5">
-    <h1>
-      <span
-        class="greeting inline-block animate-fade-in-down cursor-pointer select-none"
-      ></span>
-    </h1>
-    <br />
-    <p>ヾ(≧▽≦*)o</p>
-    <hr class="my-8" />
+  <main class="flex flex-col items-center justify-center space-y-4">
     <div>
+      <h1 class="text-center text-8xl">
+        <span
+          class="greeting inline-block animate-fade-in-down cursor-pointer select-none"
+        ></span>
+        <!-- <span>ヾ(≧▽≦*)o</span> -->
+      </h1>
+    </div>
+
+    <div class="text-center">
       <a
         class="underline underline-offset-2 hover:text-gray-500 dark:hover:text-gray-300"
         href="https://github.com/kentlius"

@@ -1,13 +1,10 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import ThemeIcon from "./ThemeToggle.astro";
 ---
 
-<header>
-  <h1 class="text-4xl font-bold mb-4">Kent Liusudarso</h1>
-  <nav class="text-right mb-8 space-x-4">
+<header class="flex justify-end items-center">
+  <nav class="space-x-4">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/about">About</HeaderLink>
-    <ThemeIcon />
   </nav>
 </header>

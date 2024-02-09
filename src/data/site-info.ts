@@ -18,11 +18,11 @@ export type SiteInfo = {
 };
 
 const siteInfo: SiteInfo = {
-  name: "Kentang",
-  description: "Kent Liusudarso is a developer from Indonesia.",
+  name: "kentang",
+  description: "",
   image: {
     src: "/social.jpg",
-    alt: "Kentang",
+    alt: "kentang",
   },
   socialLinks: [],
 };
