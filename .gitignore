@@ -1,0 +1,12 @@
+# Local wrangler / cloudflare state
+.wrangler/
+.cloudflare/
+.dev.vars
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
